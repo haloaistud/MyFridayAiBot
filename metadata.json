@@ -1,0 +1,9 @@
+{
+  "name": "Copy of Friday AI",
+  "description": "Personal AI-powered emotional companion. Features therapy-style listening, motivation coaching, and neural memory.Also a General advanced knowledge and Productivity guru",
+  "requestFramePermissions": [
+    "microphone",
+    "camera",
+    "geolocation"
+  ]
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thursday — Your Emotional Companion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              friday: {
+                50: '#f5f3ff',
+                100: '#ede9fe',
+                200: '#ddd6fe',
+                300: '#c4b5fd',
+                400: '#a78bfa',
+                500: '#8b5cf6',
+                600: '#7c3aed',
+                700: '#6d28d9',
+                800: '#5b21b6',
+                900: '#4c1d95',
+                950: '#2e1065',
+              },
+            },
+            animation: {
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'float': 'float 8s ease-in-out infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-15px)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #0c0a09;
+        color: #fafaf9;
+        overflow: hidden;
+      }
+      
+      /* Particle effects when thinking */
+      .neural-particles {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      .particle {
+        position: absolute;
+        width: 2px;
+        height: 2px;
+        background: rgba(99, 102, 241, 0.5);
+        border-radius: 50%;
+        animation: particle-float 4s infinite linear;
+      }
+
+      @keyframes particle-float {
+        0%, 100% { transform: translateY(0) scale(0); opacity: 0; }
+        50% { transform: translateY(-100px) scale(1.5); opacity: 0.8; }
+      }
+
+      /* Emotional color shifts */
+      .core-node.happy { filter: hue-rotate(120deg); }
+      .core-node.calm { filter: hue-rotate(180deg); }
+      .core-node.alert { filter: hue-rotate(-30deg); }
+      
+      .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+      .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+      .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.05); border-radius: 10px; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.33.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
